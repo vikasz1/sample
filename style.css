@@ -1,13 +1,29 @@
-.buddy {
-   font-size: 50px; 
-}
 
 img{
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     width: 12%;
+    border-color: black;
+    border-width: 4px solid ;
+    margin-top: 100px;
     height: auto;
-    border-radius: 50%;
-    display: block;
-    filter:blur(500%);
+    border: 5px solid;
+    border-image:url(border.png);
+}
+.cat-all{
+    margin-left: 50px;
+    width: auto;
+}
+
+a:link{
+    color: green;
+}
+a:visited{
+    color: yellow;
+}
+a:hover{
+    color: aqua;
+}
+a:active{
+    color: chocolate;
 }
