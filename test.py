@@ -28,7 +28,7 @@
 # print(jungle(animal))
 
 # def addTwo(list):
-#     return sum(list)
+#     return max(list)
 
 # num = 5
 # list = []
@@ -56,6 +56,9 @@ for word in splitted:
 # for w in sorted(my_dict, key=my_dict.get, reverse=True):
 #     print(w, my_dict[w])
     
+# print(sorted(my_dict))
+sorted_number = sorted(my_dict,key = my_dict.get,reverse=True)
+print(sorted_number[0])
 
-print(sorted(my_dict,key = my_dict.get,reverse=True))
-# print(my_dict)
+
+
