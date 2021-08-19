@@ -1,19 +1,21 @@
-
-# for x in range(400,501):
-#     if x%2 == 0:
-#         print(x)
-       
-# ball = 2
-# horse = "Google"
-
-# def player(name):
-#     return "hello " + name
-
-# print(player("rhythm"))
-
-# print("hello",input())
-
-def add_number(*vikas):
-    return sum(vikas)
-
-print("Area of rectangle is ",add_number(10,9,8,88,100,456))
+import sys, pygame
+pygame.init()
+size = width, height = 1920, 1080
+speed = [10, 10]
+background = 255, 255, 255
+screen = pygame.display.set_mode(size)
+pygame.display.set_caption("Bouncing ball")
+ball = pygame.image.load("ball.png")
+ballrect = ball.get_rect()
+while 1:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            sys.exit()
+    ballrect = ballrect.move(speed)
+    if ballrect.left < 0 or ballrect.right > width:
+        speed[0] = -speed[0]
+    if ballrect.top < 0 or ballrect.bottom > height:
+        speed[1] = -speed[1]
+    screen.fill(background)
+    screen.blit(ball, ballrect)
+    pygame.display.flip()
